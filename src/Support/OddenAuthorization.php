@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Focal\Filament\Support;
+namespace Odden\Filament\Support;
 
 use Closure;
 use Filament\Facades\Filament;
@@ -20,7 +20,7 @@ use function Filament\get_authorization_response;
  * panel uses strict authorization, or a `Gate::before()` callback denies). Every check
  * requires an authenticated panel user.
  */
-final class FocalAuthorization
+final class OddenAuthorization
 {
     /**
      * Whether the current user may perform the ability on the record or model class.

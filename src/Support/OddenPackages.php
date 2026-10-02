@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Focal\Filament\Support;
+namespace Odden\Filament\Support;
 
-use Focal\Marketing\Models\Campaign;
-use Focal\Sales\Models\Deal;
-use Focal\Service\Models\Ticket;
+use Odden\Marketing\Models\Campaign;
+use Odden\Sales\Models\Deal;
+use Odden\Service\Models\Ticket;
 
 /**
- * Which optional Focal packages are installed alongside Core.
+ * Which optional Odden packages are installed alongside Core.
  *
  * @internal
  */
-final class FocalPackages
+final class OddenPackages
 {
     /** @var array<string, bool> */
     private static array $overrides = [];

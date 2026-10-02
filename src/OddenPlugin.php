@@ -2,60 +2,60 @@
 
 declare(strict_types=1);
 
-namespace Focal\Filament;
+namespace Odden\Filament;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
-use Focal\Filament\Pages\AbmCockpit;
-use Focal\Filament\Pages\CampaignBenchmarking;
-use Focal\Filament\Pages\DataQuality;
-use Focal\Filament\Pages\ExecutiveOverview;
-use Focal\Filament\Pages\MarketingAttribution;
-use Focal\Filament\Pages\MarketingCalendar;
-use Focal\Filament\Pages\MarketingCockpit;
-use Focal\Filament\Pages\SalesCockpit;
-use Focal\Filament\Pages\SenderDomainHealth;
-use Focal\Filament\Pages\ServiceAnalytics;
-use Focal\Filament\Pages\ServiceCockpit;
-use Focal\Filament\Pages\UtmLinkBuilder;
-use Focal\Filament\Resources\AdAudienceSyncResource;
-use Focal\Filament\Resources\CampaignResource;
-use Focal\Filament\Resources\CannedResponseResource;
-use Focal\Filament\Resources\CompanyResource;
-use Focal\Filament\Resources\ContactResource;
-use Focal\Filament\Resources\CrmListResource;
-use Focal\Filament\Resources\DealResource;
-use Focal\Filament\Resources\KnowledgeArticleResource;
-use Focal\Filament\Resources\LandingPageResource;
-use Focal\Filament\Resources\LeadRoutingRuleResource;
-use Focal\Filament\Resources\LeadScoringRuleResource;
-use Focal\Filament\Resources\MarketingAssetResource;
-use Focal\Filament\Resources\MarketingEventResource;
-use Focal\Filament\Resources\MarketingFormResource;
-use Focal\Filament\Resources\MarketingSubscriptionResource;
-use Focal\Filament\Resources\MarketingTemplateResource;
-use Focal\Filament\Resources\MarketingWorkflowResource;
-use Focal\Filament\Resources\NpsSurveyResource;
-use Focal\Filament\Resources\PipelineResource;
-use Focal\Filament\Resources\PropertyDefinitionResource;
-use Focal\Filament\Resources\QuoteResource;
-use Focal\Filament\Resources\SalesEmailTemplateResource;
-use Focal\Filament\Resources\SalesMeetingLinkResource;
-use Focal\Filament\Resources\SalesPlaybookResource;
-use Focal\Filament\Resources\SalesQuotaResource;
-use Focal\Filament\Resources\SalesSequenceResource;
-use Focal\Filament\Resources\SlaPolicyResource;
-use Focal\Filament\Resources\TicketResource;
-use Focal\Filament\Resources\TicketRoutingRuleResource;
-use Focal\Marketing\Models\Campaign;
-use Focal\Sales\Models\Deal;
-use Focal\Service\Models\Ticket;
+use Odden\Filament\Pages\AbmCockpit;
+use Odden\Filament\Pages\CampaignBenchmarking;
+use Odden\Filament\Pages\DataQuality;
+use Odden\Filament\Pages\ExecutiveOverview;
+use Odden\Filament\Pages\MarketingAttribution;
+use Odden\Filament\Pages\MarketingCalendar;
+use Odden\Filament\Pages\MarketingCockpit;
+use Odden\Filament\Pages\SalesCockpit;
+use Odden\Filament\Pages\SenderDomainHealth;
+use Odden\Filament\Pages\ServiceAnalytics;
+use Odden\Filament\Pages\ServiceCockpit;
+use Odden\Filament\Pages\UtmLinkBuilder;
+use Odden\Filament\Resources\AdAudienceSyncResource;
+use Odden\Filament\Resources\CampaignResource;
+use Odden\Filament\Resources\CannedResponseResource;
+use Odden\Filament\Resources\CompanyResource;
+use Odden\Filament\Resources\ContactResource;
+use Odden\Filament\Resources\CrmListResource;
+use Odden\Filament\Resources\DealResource;
+use Odden\Filament\Resources\KnowledgeArticleResource;
+use Odden\Filament\Resources\LandingPageResource;
+use Odden\Filament\Resources\LeadRoutingRuleResource;
+use Odden\Filament\Resources\LeadScoringRuleResource;
+use Odden\Filament\Resources\MarketingAssetResource;
+use Odden\Filament\Resources\MarketingEventResource;
+use Odden\Filament\Resources\MarketingFormResource;
+use Odden\Filament\Resources\MarketingSubscriptionResource;
+use Odden\Filament\Resources\MarketingTemplateResource;
+use Odden\Filament\Resources\MarketingWorkflowResource;
+use Odden\Filament\Resources\NpsSurveyResource;
+use Odden\Filament\Resources\PipelineResource;
+use Odden\Filament\Resources\PropertyDefinitionResource;
+use Odden\Filament\Resources\QuoteResource;
+use Odden\Filament\Resources\SalesEmailTemplateResource;
+use Odden\Filament\Resources\SalesMeetingLinkResource;
+use Odden\Filament\Resources\SalesPlaybookResource;
+use Odden\Filament\Resources\SalesQuotaResource;
+use Odden\Filament\Resources\SalesSequenceResource;
+use Odden\Filament\Resources\SlaPolicyResource;
+use Odden\Filament\Resources\TicketResource;
+use Odden\Filament\Resources\TicketRoutingRuleResource;
+use Odden\Marketing\Models\Campaign;
+use Odden\Sales\Models\Deal;
+use Odden\Service\Models\Ticket;
 
-class FocalPlugin implements Plugin
+class OddenPlugin implements Plugin
 {
     public function getId(): string
     {
-        return 'focal';
+        return 'odden';
     }
 
     public function register(Panel $panel): void
